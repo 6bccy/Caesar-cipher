@@ -10,7 +10,7 @@ def ccipher():
   cipher = int(input("How far do you want it to be ciphered? "))
 
   for i in range (0,length):
-    addword = input("What is the number ",i," letter of your word? ")
+    addword = input("What is the letter of your word? ")
     iword.append(addword)
 
   for x in range(0,length):
