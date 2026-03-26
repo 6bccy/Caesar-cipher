@@ -1,0 +1,30 @@
+#Caesar cipher
+
+tword = []
+
+def ccipher():
+  iword = []
+  nword = []
+  fword = []
+  length = int(input("How long is your word? "))
+  cipher = int(input("How far do you want it to be ciphered? "))
+
+  for i in range (0,length):
+    addword = input("What is the number ",i," letter of your word? ")
+    iword.append(addword)
+
+  for x in range(0,length):
+    num = ord(iword[x])
+    num = num + cipher
+    nword.append(num)
+    addfword = chr(nword[x])
+    fword.append(addfword)
+
+  pword = "".join(fword)
+  return pword
+repeat = int(input("How many words are in your sentence? "))
+for g in range(0,repeat):
+  tword.append(ccipher())
+  tword.append(" ")
+tfword = "".join(tword)  
+print(tfword)
